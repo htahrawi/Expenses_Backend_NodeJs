@@ -4,13 +4,17 @@ const { Schema } = mongoose;
 
 const ExpenseSchema = new Schema(
   {
+    title: {
+      type: String,
+      required: [true, "title is required"],
+    },
     amount: {
       type: Number,
       required: [true, "amount is required"],
     },
     category: {
       type: String,
-      requires: [true, "cat is required"],
+      required: [true, "category is required"],
     },
     description: {
       type: String,
